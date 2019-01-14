@@ -9,8 +9,11 @@ public:
 
 private:
 	int data;
-	Node* src_nodes;
-	Node* dst_nodes;
+
+	unsigned int num_src = 0;
+	Node** src_nodes;
+	unsigned int num_dst = 0;
+	Node** dst_nodes;
 };
 
 #endif

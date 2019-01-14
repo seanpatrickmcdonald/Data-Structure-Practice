@@ -11,3 +11,6 @@ BinaryTree.o :
 
 Node.o : 
 	gcc -c Node.cpp
+
+clean : 
+	rm -f LinkedList.o BinaryTree.o Node.o

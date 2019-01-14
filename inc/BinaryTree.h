@@ -12,7 +12,9 @@ public:
 	int Delete(int data);
 
 private:
+	void BalanceTree();
+
 	Node* root;
 };
-git 
+
 #endif
