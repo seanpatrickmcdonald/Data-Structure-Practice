@@ -3,17 +3,17 @@
 
 class Node{
 public:
-	Node(int data);
+	Node(int data, 
+		Node* src_node_in = nullptr, 
+		Node* dst_node_in = nullptr);
 	~Node();
-
+	int GetData();
 
 private:
 	int data;
 
-	unsigned int num_src = 0;
-	Node** src_nodes;
-	unsigned int num_dst = 0;
-	Node** dst_nodes;
+	Node* src_node;
+	Node* dst_node;
 };
 
 #endif

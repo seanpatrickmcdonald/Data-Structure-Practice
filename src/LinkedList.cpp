@@ -8,10 +8,10 @@ LinkedList::~LinkedList(){
 
 }
 
-void LinkedList::Insert(){
+void LinkedList::Insert(int data){
 
 }
 
-void LinkedList::Delete(){
+void LinkedList::Delete(int data){
 	
 }

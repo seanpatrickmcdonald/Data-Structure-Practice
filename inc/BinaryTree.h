@@ -2,6 +2,7 @@
 #define BINARYTREE_H
 
 #include "Node.h"
+#include <iostream>
 
 class BinaryTree{
 public:
@@ -10,6 +11,8 @@ public:
 
 	void Insert(int data);
 	int Delete(int data);
+
+	void PrintTree();
 
 private:
 	void BalanceTree();
