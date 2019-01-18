@@ -7,5 +7,4 @@ int main()
 	BinaryTree T;
 
 	T.Insert(2);
-	T.PrintTree();
 }

@@ -10,6 +10,7 @@ public:
 	~BinaryTree();
 
 	void Insert(int data);
+	int Search(int data);
 	int Delete(int data);
 
 	void PrintTree();
