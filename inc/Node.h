@@ -17,6 +17,7 @@ public:
 	Node* GetLeftChild();
 	Node* GetRightChild();
 
+
 private:
 	int data;
 

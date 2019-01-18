@@ -13,10 +13,12 @@ public:
 	int Search(int data);
 	int Delete(int data);
 
-	void PrintTree();
+	void PrintPreOrder();
 
 private:
 	void BalanceTree();
+
+	void static const PreOrder(Node*);
 
 	Node* root;
 };

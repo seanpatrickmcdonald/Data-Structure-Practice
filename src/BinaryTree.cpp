@@ -19,10 +19,22 @@ void BinaryTree::Insert(int data){
 		if (data > cursor->GetData()){
 			if (cursor->GetRightChild() == nullptr){
 				cursor->SetRightChild(new Node(data));
+				return;
 			}
 
 			else{
 				cursor = cursor->GetRightChild();
+			}
+		}
+
+		else{
+			if (cursor->GetLeftChild() == nullptr){
+				cursor->SetLeftChild(new Node(data));
+				return;
+			}
+
+			else{
+				cursor = cursor->GetLeftChild();
 			}
 		}
 	}
@@ -38,18 +50,18 @@ int BinaryTree::Search(int data){
 			}
 
 			else{
-				if (cursor_data > data){
-					//cursor = root->GetRightChild();
+				if (data > cursor_data){
+					cursor = cursor->GetRightChild();
 				}
 
 				else{
-					//cursor = root->GetLeftChild();
+					cursor = cursor->GetLeftChild();
 				}
 			}
 		}
 	}
 
-	return -1;
+	return 0;
 }
 
 int BinaryTree::Delete(int data){
@@ -60,8 +72,17 @@ void BinaryTree::BalanceTree(){
 	
 }
 
-void BinaryTree::PrintTree(){
-	if (root){
-		std::cout << root->GetData() << std::endl;
+void BinaryTree::PrintPreOrder(){
+	PreOrder(root);
+	std::cout << std::endl;
+}
+
+void const BinaryTree::PreOrder(Node* cursor){
+	if (!cursor){
+		return;
 	}
+
+	PreOrder(cursor->GetLeftChild());
+	std::cout << cursor->GetData() << ' ';
+	PreOrder(cursor->GetRightChild());
 }
